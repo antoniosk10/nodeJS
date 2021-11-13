@@ -4,9 +4,9 @@ const {exit} = process;
 
 module.exports = () => {
     const valueConfig = getValueByFlag("config");
-    const stepsOfDecode = valueConfig.split("-");
-    stepsOfDecode.forEach(config => {
-        if (MAP_OF_CONFIGS.indexOf(config) === -1) {
+    const stepsOfEncode = valueConfig.split("-");
+    stepsOfEncode.forEach(config => {
+        if (Object.keys(MAP_OF_CONFIGS).indexOf(config) === -1) {
             exit(1);
         }
     });
