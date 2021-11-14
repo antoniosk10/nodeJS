@@ -29,5 +29,6 @@ pipeline(readStream, transformStringStream, writeStream, err => {
         exit(1);
     } else {
         stdout.write("Готово!");
+        exit();
     }
 });
