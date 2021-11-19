@@ -1,5 +1,5 @@
-const ALPHABET = require("../../constants/alphabet");
-const isUpperLatter = require("../isUpperLatter");
+const ALPHABET = require("@app/constants/alphabet");
+const isUpperLatter = require("@app/utils/isUpperLatter");
 
 module.exports = char => {
     const indexOfChar = ALPHABET.indexOf(char.toLowerCase());

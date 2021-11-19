@@ -1,5 +1,5 @@
-const INPUT_DATA = require("../constants/inputData");
-const FLAGS = require("../constants/flags");
+const INPUT_DATA = require("@app/constants/inputData");
+const FLAGS = require("@app/constants/flags");
 
 module.exports = keyOfFlag => {
     const indexFlag = INPUT_DATA.indexOf(

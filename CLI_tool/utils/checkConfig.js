@@ -1,5 +1,5 @@
 const getValueByFlag = require("./getValueByFlag");
-const MAP_OF_CONFIGS = require("../constants/configs");
+const MAP_OF_CONFIGS = require("@app/constants/configs");
 const {exit} = process;
 
 module.exports = () => {

@@ -1,3 +1,4 @@
+require("module-alias/register");
 const options = require("./options");
 const fs = require("fs");
 const input = options.input && fs.createReadStream(options.input, "utf-8");

@@ -1,6 +1,6 @@
-const transformString = require("../utils/transformString");
+const transformString = require("@app/utils/transformString");
 const {Transform} = require("stream");
-const getValueByFlag = require("../utils/getValueByFlag");
+const getValueByFlag = require("@app/utils/getValueByFlag");
 
 class TransformStringStream extends Transform {
     _transform(chunk, encoding, callback) {
