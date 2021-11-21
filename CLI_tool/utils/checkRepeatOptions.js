@@ -1,6 +1,5 @@
-const INPUT_DATA = require("../constants/inputData");
-const FLAGS = require("../constants/flags");
-const {exit} = process;
+const INPUT_DATA = require("@app/constants/inputData");
+const FLAGS = require("@app/constants/flags");
 
 module.exports = () => {
     Object.keys(FLAGS).forEach(keyFlag => {
@@ -13,7 +12,7 @@ module.exports = () => {
             });
         });
         if (countOfFlags > 1) {
-            exit(2);
+            process.exit(2);
         }
     });
 };

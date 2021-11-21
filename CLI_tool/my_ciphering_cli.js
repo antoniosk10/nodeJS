@@ -1,3 +1,4 @@
+require("module-alias/register");
 const options = require("./options");
 const fs = require("fs");
 const input = options.input && fs.createReadStream(options.input, "utf-8");
@@ -13,6 +14,9 @@ const writeStream = options.output ? output : stdout;
 const TransformStream = require("./stream/transformStream");
 const transformStringStream = new TransformStream();
 
+if (!(options.output && fs.existsSync(options.output))) {
+    exit(3);
+}
 if (!options.input) {
     stdout.write("Строка для шифрования:\n");
 }

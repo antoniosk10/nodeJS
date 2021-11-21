@@ -1,5 +1,21 @@
 {
-    "devDependencies": {
-        "prettier": "2.4.1"
+  "scripts": {
+    "test": "jest --verbose",
+    "test-coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "prettier": "2.4.1"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },  
+  "_moduleAliases": {
+        "@app": "CLI_tool/"
+    },
+  "jest": {
+      "moduleNameMapper": {
+        "@app/(.*)": "<rootDir>/CLI_tool/$1"
+      }
     }
 }
