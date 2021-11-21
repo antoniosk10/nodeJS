@@ -14,6 +14,9 @@ const writeStream = options.output ? output : stdout;
 const TransformStream = require("./stream/transformStream");
 const transformStringStream = new TransformStream();
 
+if (!(options.output && fs.existsSync(options.output))) {
+    exit(3);
+}
 if (!options.input) {
     stdout.write("Строка для шифрования:\n");
 }
